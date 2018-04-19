@@ -53,7 +53,6 @@ public class VinhosController {
 			return novo(vinho);
 		}
 		getService().salvar(vinho);
-		
 		attributes.addFlashAttribute("messageSuccess", "Vinho salvo com sucesso!");
 		
 		return new ModelAndView("redirect:/vinhos/novo");
