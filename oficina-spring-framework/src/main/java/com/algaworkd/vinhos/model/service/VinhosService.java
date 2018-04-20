@@ -19,7 +19,7 @@ public class VinhosService {
 	}
 	
 	public Vinho buscarPorId(Long id) {
-		return getRepository().findById(id).get(); 
+		return getRepository().findOne(id); 
 	}
 	
 	public List<Vinho> listarTodos() {
