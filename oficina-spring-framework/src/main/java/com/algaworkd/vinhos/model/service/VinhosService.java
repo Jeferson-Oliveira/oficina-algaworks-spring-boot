@@ -26,14 +26,19 @@ public class VinhosService {
 		return getRepository().findAll();
 	}
 	
+	public void remover(Long id) {
+		getRepository().delete(id);
+	}
 	
+	public void editar(Vinho vinho) {
+		getRepository().save(vinho);
+	}
 	
-	public VinhosRepository getRepository() {
+	private VinhosRepository getRepository() {
 		return repository;
 	}
+
 	
-	public void setRepository(VinhosRepository repository) {
-		this.repository = repository;
-	}
+	
 
 }
